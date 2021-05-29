@@ -38,30 +38,32 @@ const WeatherApp = () => {
   return (
     <Container>
       <Row>
-      <Col>
-        <Form>
-          <h2 className="item-center">Weather App</h2>
-          <div className="d-flex my-3">
-            <InputGroup className="mb-3">
-              <InputGroup.Prepend>
-                <InputGroup.Text>Enter Your City</InputGroup.Text>
-              </InputGroup.Prepend>
-              <Form.Control
-                type="text"
-                placeholder="City"
-                className="me-1"
-                name="city"
-                onChange={(e) => handleChange(e)}
-              />
-              <InputGroup.Append>
-                <Button
-                  variant="outline-secondary"
-                  onClick={(e) => weatherData(e)}
-                >
-                  Submit
-                </Button>
-              </InputGroup.Append>
-              {/* 
+        <Col>
+          <Form>
+            <h2 className="ml-5 my-3" style={{ color: "red" }}>
+              My Weather App
+            </h2>
+            <div className="d-flex my-3">
+              <InputGroup className="mb-3">
+                <InputGroup.Prepend>
+                  <InputGroup.Text>Enter Your City</InputGroup.Text>
+                </InputGroup.Prepend>
+                <Form.Control
+                  type="text"
+                  placeholder="City"
+                  className="me-1"
+                  name="city"
+                  onChange={(e) => handleChange(e)}
+                />
+                <InputGroup.Append>
+                  <Button
+                    variant="outline-secondary"
+                    onClick={(e) => weatherData(e)}
+                  >
+                    Submit
+                  </Button>
+                </InputGroup.Append>
+                {/* 
               <Form.Control
                 type="text"
                 className="me-1"
@@ -69,20 +71,20 @@ const WeatherApp = () => {
                 name="country"
                 onChange={(e) => handleChange(e)}
               /> */}
-            </InputGroup>
+              </InputGroup>
 
-            {/* <Button variant="primary" onClick={(e) => weatherData(e)}>
+              {/* <Button variant="primary" onClick={(e) => weatherData(e)}>
               Submit
             </Button> */}
-          </div>
-        </Form>
+            </div>
+          </Form>
 
-        {/* {console.log(weather)} */}
-        {weather.data !== undefined ? (
-          <div className = "ml-5">
-            <DisplayWeather data={weather.data} />
-          </div>
-        ) : null}
+          {/* {console.log(weather)} */}
+          {weather.data !== undefined ? (
+            <div className="ml-5">
+              <DisplayWeather data={weather.data} />
+            </div>
+          ) : null}
         </Col>
       </Row>
     </Container>

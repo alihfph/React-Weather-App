@@ -25,7 +25,7 @@ const DisplayWeather = (props) => {
         </Col>
         <Col>
           {/* <h6 c>{data.weather[0].main}</h6> */}
-          <img src={iconurl} alt="" srcset="" />
+          <img src={iconurl}  alt="" srcset="" />
           <h6> {data.weather[0].description}</h6>
         </Col>
       </Row>
