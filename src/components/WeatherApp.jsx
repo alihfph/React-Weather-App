@@ -5,15 +5,15 @@ import { Container, Button, Form, Row, InputGroup, Col } from "react-bootstrap";
 const WeatherApp = () => {
   const [weather, setWeather] = useState([]);
   const [form, setForm] = useState({
-    city: "",
-    country: "",
+    cityName: "",
+    countryName: "",
   });
 
   const APIKEY = "ba134ec0dbcf359ab89c5131fddbffb3";
   async function weatherData(e) {
     e.preventDefault();
     if (form.city === "") {
-      alert("Add values");
+      alert("Please enter the name of city");
     } else {
       const resp = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${form.city},${form.country}&APPID=${APIKEY}`
